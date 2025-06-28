@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cinéma EMPIRE ARIEL</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function toggleDetails(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎥 Cinéma EMPIRE ARIEL</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">À Propos</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Tarifs</a></li>
+          <li><a href="#events">Événements</a></li>
+          <li><a href="#testimonials">Témoignages</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <h2>À Propos</h2>
+        <p>Bienvenue au Cinéma EMPIRE ARIEL, votre cinéma moderne à Bruxelles avec les meilleurs films en 2D, 3D et IMAX. Confort, technologie de pointe, et immersion garantie dans une ambiance conviviale et premium.</p>
+        <img src="images/bin.jpg" alt="Salle de cinéma" />
+      </section>
+
+      <section id="services">
+        <h2>Nos Services</h2>
+
+        <div class="box" onclick="toggleDetails('prog1')">🎬 Projections de Films</div>
+        <div id="prog1" class="service-details">
+          <ul>
+            <li>🎞️ Avatar 2 — 16h00 — <strong>Salle 1 (IMAX)</strong></li>
+            <li>🎞️ Oppenheimer — 19h00 — <strong>Salle 2 (3D)</strong></li>
+            <li>🎞️ Dune: Part Two — 21h30 — <strong>Salle 1 (IMAX)</strong></li>
+            <li>🎞️ Les Minions 2 — 14h00 — <strong>Salle 3 (2D)</strong></li>
+            <li>🎞️ Fast X — 22h00 — <strong>Salle 2 (3D)</strong></li>
+            <li>🎞️ Black Panther 2 — 18h30 — <strong>Salle 1 (2D)</strong></li>
+            <li>🎞️ Super Mario Bros — 10h00 — <strong>Salle 3 (2D)</strong></li>
+          </ul>
+        </div>
+
+        <div class="box" onclick="toggleDetails('prog2')">🍿 Snacks & Restauration</div>
+        <div id="prog2" class="service-details">
+          <ul>
+            <li>Menu Popcorn + Soda — <strong>5,50€</strong></li>
+            <li>Nachos + Sauce Fromage — <strong>4,00€</strong></li>
+            <li>Glaces Artisanales — <strong>3,50€</strong></li>
+            <li>Sandwichs Chauds + Jus — <strong>6,00€</strong></li>
+            <li>Bonbons en Vrac — <strong>2,50€</strong></li>
+            <li>Boissons Fraîches & Café — <strong>2,00€</strong></li>
+          </ul>
+        </div>
+
+        <div class="box" onclick="toggleDetails('prog3')">💻 Réservations en Ligne</div>
+        <div id="prog3" class="service-details">
+          <form class="reservation-form">
+            <label for="movie">🎬 Film :</label>
+            <select id="movie" name="movie" required>
+              <option value="">-- Choisir un film --</option>
+              <option>Avatar 2</option>
+              <option>Oppenheimer</option>
+              <option>Dune: Part Two</option>
+              <option>Les Minions 2</option>
+              <option>Fast X</option>
+              <option>Black Panther 2</option>
+              <option>Super Mario Bros</option>
+            </select>
+
+            <label for="date">📅 Date :</label>
+            <input type="date" id="date" name="date" required />
+
+            <label for="time">🕒 Heure :</label>
+            <select id="time" name="time" required>
+              <option value="">-- Choisir l'heure --</option>
+              <option>10h00</option>
+              <option>14h00</option>
+              <option>16h00</option>
+              <option>18h30</option>
+              <option>19h00</option>
+              <option>21h30</option>
+              <option>22h00</option>
+            </select>
+
+            <label for="seats">🪑 Nombre de billets :</label>
+            <input type="number" id="seats" name="seats" min="1" max="10" required />
+
+            <button type="submit" class="button">Réserver maintenant</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="pricing">
+        <h2>🎟️ Tarifs & Abonnements</h2>
+        <ul>
+          <li>Billet standard : 8,00€</li>
+          <li>Étudiants & enfants (-12 ans) : 6,00€</li>
+          <li>Séances IMAX : 11,00€</li>
+          <li>Carte abonnement 5 places : 35,00€</li>
+          <li>Pass illimité mensuel : 25,00€/mois</li>
+        </ul>
+      </section>
+
+      <section id="events">
+        <h2>📅 Événements à venir</h2>
+        <ul>
+          <li>🎬 Avant-première de “Deadpool 3” — 27 juin à 20h</li>
+          <li>🍿 Soirée Popcorn à volonté — Tous les vendredis</li>
+          <li>👶 Séance parents/bébés — Chaque mercredi à 10h</li>
+        </ul>
+      </section>
+
+      <section id="testimonials">
+        <h2>💬 Ce que disent nos visiteurs</h2>
+        <blockquote>"Un des meilleurs cinémas de la ville, son exceptionnel !"</blockquote>
+        <cite>— Amine T.</cite>
+
+        <blockquote>"Les fauteuils sont ultra confortables, j’y retourne chaque semaine."</blockquote>
+        <cite>— Sarah M.</cite>
+      </section>
+
+      <section id="newsletter">
+        <h2>📬 Restez informé</h2>
+        <form>
+          <label for="newsletter-email">Votre Email :</label>
+          <input type="email" id="newsletter-email" name="newsletter-email" placeholder="ex: nom@email.com" required>
+          <button type="submit" class="button">S'inscrire</button>
+        </form>
+      </section>
+
+      <section id="contact">
+        <h2>Contactez-nous</h2>
+        <form action="/submit" method="POST">
+          <label for="name">Nom :</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" required />
+
+          <button type="submit" class="button">Envoyer</button>
+        </form>
+        <p>Téléphone : <a href="tel:+32456789123" class="contact-phone">+32 456 789 123</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Cinéma EMPIRE ARIEL. Tous droits réservés.</p>
+    </footer>
+  </div>
+</body>
+</html>
